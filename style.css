@@ -96,6 +96,8 @@ body {
   align-items: center;
   min-height: unset !important;
   padding-block: unset !important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header__nav ul {
