@@ -1,0 +1,228 @@
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1B1B1B;
+  color: #eef8ce;
+  font-size: 14px;
+  background-image:
+    url(img/bg.png),
+    repeating-linear-gradient(
+      to right, transparent 0 500px, #73814B33 500px 501px
+    );
+  background-size: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__container {
+  width: min(1200px, 90vw);
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  padding-block: 10em;
+}
+
+.section__container--split {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__container--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section__number {
+  font-family: "devil breeze";
+  font-size: 15em;
+  font-weight: bold;
+}
+
+.section__title {
+  font-family: "devil breeze";
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.section__text {
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  padding-block: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  background-color: #1B1B1B11;
+  background-image: repeating-linear-gradient(
+    to right, transparent 0 500px, #eee1 500px 501px
+  );
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+
+.header__nav ul {
+  display: flex;
+  gap: 2em;
+}
+
+/* Hero */
+.section--hero .hero__title {
+  color: #d1ff48;
+  font-size: 11em;
+  font-family: "devil breeze";
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+.section--hero .hero__title::before {
+  content: attr(data-before);
+  position: absolute;
+  top: 0.5em;
+  inset: 0.66em 0 0 0;
+  z-index: -1;
+  color: #445022;
+}
+
+/* Decor elements */
+.decor {
+  position: absolute;
+}
+
+.decor--flower {
+  /* có thể thêm style riêng cho hoa */
+}
+
+.decor--leaf {
+  /* style cho lá */
+}
+
+.decor--leaf-large {
+  z-index: 101;
+}
+
+/* Details */
+.section--details .section__container {
+  padding-right: 30%;
+}
+
+.section--details .section__number {
+  font-size: 5em;
+}
+
+.section--details .section__title {
+  font-size: 7em;
+  font-weight: 500;
+}
+
+/* Contact */
+.contact__table {
+  width: min(800px, 90vw);
+  padding-top: 2em;
+  font-size: 2em;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.contact__cell {
+  padding-block: 0.5em;
+  border-bottom: 1px dashed #445022;
+}
+
+.contact__cell--key {
+  text-align: left;
+  font-weight: 500;
+}
+
+.contact__cell--val {
+  text-align: right;
+  font-weight: 200;
+}
+
+.contact__sign {
+  font-family: 'Bimbo', sans-serif;
+  font-size: 10em;
+}
+
+/* 3D scene layer */
+.scene3d {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 1023px) {
+  .section--hero .hero__title {
+    font-size: 5em;
+  }
+  .section__container--split {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section--hero .hero__title {
+    font-size: 3em;
+  }
+  .section__container--split {
+    flex-direction: column;
+  }
+  .section__number {
+    font-size: 5em;
+  }
+  .section__title {
+    font-size: 2em;
+  }
+  .section--details .section__container {
+    padding-right: 0;
+  }
+  .contact__table {
+    font-size: 1em;
+  }
+  .contact__sign {
+    font-size: 2em;
+  }
+  .scene3d {
+    position: absolute;
+  }
+}
